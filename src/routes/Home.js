@@ -19,12 +19,11 @@ class Home extends React.Component{
     const { isLoading, movies } = this.state;
     return (
       <section className="container">
-        {isLoading 
-        ? <div className="loader">
-            <span className="loader__text">Loading...</span>
-          </div>
-        
-        : (
+        {isLoading ? (
+            <div className="loader">
+                <span className="loader__text">Loading...</span>
+            </div>
+        ) : (
           <div className="movies">
             {movies.map(movie => (
               <Movie 
